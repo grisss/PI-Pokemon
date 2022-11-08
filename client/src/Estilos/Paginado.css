@@ -1,0 +1,18 @@
+.numBox{
+    display: flex;
+    margin: 1rem;
+}
+.indexCont{
+    width: 50px;
+    height: 40px;
+    background-color: #030e12;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 0 5px 0 5px;
+    position: relative; right:-541px;
+    top: 2px;
+    font-size: 16px;
+}
+
+

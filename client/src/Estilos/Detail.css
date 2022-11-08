@@ -1,0 +1,116 @@
+.image3{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;left:500px;
+    right: -150px;
+    border: 3px solid rgb(228, 157, 157);
+    position: relative;top:-120px;
+}
+.volver{
+    position: relative;top:-30px;
+    background-color: #b74555;
+    color: white;
+    padding: 0.8rem;
+    font-size: 17px;
+    border-radius: 8px;
+    border: none;
+    width: 130px;
+    font-weight: bold;
+    position: relative;right:-4px;
+}
+.ID{
+    right:110px;
+    position: relative;top:200px;
+    color:rgb(67, 67, 71);
+    font-size:17px ;
+}
+.poke-ID{
+    position: relative;right:-20px;
+    position: relative;top:180px;
+    font-size:17px ;
+    color: azure;
+
+}
+.nombre{
+    right:84px;
+    position: relative;top:140px;
+    color:rgb(67, 67, 71);
+    font-size: 17px;
+}
+.name2{
+    position: relative;left:30px;
+    position: relative;top:120px;
+    font-size: 17px;
+    color: rgb(41, 3, 102);
+}
+.detalle{
+    right: 70px;
+    position: relative;top:-110px;
+    color:rgb(67, 67, 71);
+    font-size: 17px;
+}
+.velocidad{
+    position: relative;left:60px;
+    font-size: 17px;
+    position: relative;top:-120px;
+    color: azure;
+}
+.vida{
+    position: relative;left:40px;
+    font-size: 17px;
+    position: relative;top:-115px;
+    color: azure;
+}
+.fuerza{
+    position: relative;left:50px;
+    font-size: 17px;
+    position: relative;top:-110px;
+    color: azure;
+}
+.defensa{
+    position: relative;left:55px;
+    font-size: 17px;
+    position: relative;top:-110px;
+    color: azure;
+}
+.altura{
+    position: relative;left:47px;
+    font-size: 17px;
+    position: relative;top:-110px;
+    color: azure;
+}
+.peso{
+    position: relative;left:47px;
+    font-size: 17px;
+    position: relative;top:-107px;
+    color: azure;
+}
+
+.Poke-img{
+    width: 170px;
+    height: 170px;
+    position: relative;right:-2px;
+    position: relative;top:-90px;
+}
+
+.container5{
+    background-color: rgb(180, 170, 233);
+    width: 22%;
+    position: relative;right:-550px;
+    height: 410px;
+    border-radius: 50px;
+    position: relative;top:60px;
+}
+.container6{
+    background-color: rgb(228, 170, 233);
+    height: 180px;
+    border-top-left-radius: 50px ;
+    border-top-right-radius: 50px;
+}
+
+.loading{
+    color:rgb(233, 139, 205);
+    position: relative;top:300px;
+    font-size: 35px;
+}

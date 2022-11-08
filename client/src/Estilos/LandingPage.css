@@ -1,0 +1,51 @@
+.title1{
+    color: #ebd758;
+    margin: 100px;
+    text-align: left;
+    font-family: Comic Sans MS;
+    font-weight: bold;
+    font-size: 30px;
+    text-shadow: -1px 0 #414d68, 0 1px #414d68, 1px 0 #414d68, 0 -1px #414d68, -2px 2px 0 #414d68, 
+    2px 2px 0 #414d68, 1px 1px #414d68, 2px 2px #414d68, 3px 3px #414d68, 4px 4px #414d68, 5px
+    5px #414d68 , 6px 6px #414d68, 7px 7px #414d68, 8px 8px #414d68, 9px 9px #414d68; 
+    position: relative;top:100px;
+    left : 400px;
+
+}
+.button{
+    background-color:#c1b1eb;
+    color: #0000008e;
+    padding: 12px 10px;
+    letter-spacing: 4px;
+    font-size: 20px;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: 0.2s;
+    margin: 23px;
+    text-decoration: dashed;
+    position: relative; top:-100px;
+    right: -43px;
+    display: inline-block;
+    border: none;
+}
+.lorem{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    position: relative;top:-50px;
+    right: -100px;
+    border: 5px solid rgb(228, 157, 157);
+}
+
+.h{
+    width: 70%;
+    height: 5px;
+    color: white;
+    border: 0 none;
+    margin-top: 200px;
+    margin-bottom: 90px;
+    background:linear-gradient(to right, #976287 3%, #854848 20%, #5a5180 50%,#779b68 80%,
+    #ca77b8 90%);
+    position: relative; top: -250px;
+    right: -200px;
+}

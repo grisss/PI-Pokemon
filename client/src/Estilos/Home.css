@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2? family= Bona+Nova & family= Roboto:wght@300 & display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #fceec8;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: 35% 35% 35% ;
+    grid-gap: 2rem;
+
+
+    
+}
+.Sub{
+    text-decoration: none;
+
+}
+.A{
+    margin: 0 5px;
+    text-decoration: none;
+    padding: 0.3rem 1.3rem;
+    font-size: 15px;
+    font-weight: bold;
+    color: #494234;
+    content: "";
+    height: 8%;
+    width: 8%;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    background-color: #c6ebb1;
+    position: relative; top:-20px;
+
+}
+.Fuerza{
+    margin: 0 5px;
+    text-decoration: none;
+    padding: 0.3rem 1.3rem;
+    font-size: 15px;
+    font-weight: bold;
+    color: #494234;
+    content: "";
+    height: 8%;
+    width: 8%;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    background-color: #c6ebb1;
+    position: relative; top:-20px;
+}
+.Tipo{
+    margin: 0 5px;
+    text-decoration: none;
+    padding: 0.3rem 1.3rem;
+    font-size: 15px;
+    font-weight: bold;
+    color: #494234;
+    content: "";
+    height: 8%;
+    width: 8%;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    background-color: #c6ebb1;
+    position: relative; top:-20px;
+}
+
+.Todos{
+    margin: 0 5px;
+    text-decoration: none;
+    padding: 0.3rem 1.3rem;
+    font-size: 15px;
+    font-weight: bold;
+    color: #494234;
+    content: "";
+    height: 8%;
+    width: 8%;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    background-color: #c8ebb1;
+    position: relative; top:-20px;
+}
+.Title2{
+    position: relative; left:1100px;
+    position: relative; top:-10px;
+    text-align: left; 
+font-family: Arial Black; 
+font-weight: bold; 
+font-size: 30px; 
+color: rgb(248, 96, 96); 
+text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+}
+
+.imagen2{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;left:500px;
+    right: -150px;
+    border: 3px solid rgb(228, 157, 157);
+}

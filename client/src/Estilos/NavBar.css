@@ -1,0 +1,13 @@
+.poke{
+    margin-top: 2.5rem;
+    text-decoration: none;
+    border: none;
+    font-size: 18px;
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    border-radius: 0 50% 50% 0;
+    background-color: #494234;
+    color: white;
+    cursor: pointer;
+    position: relative; left:-500px;
+    position: relative; top:50px;
+}
