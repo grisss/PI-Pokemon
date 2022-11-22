@@ -6,11 +6,11 @@ export default function Card({name, types, image}){
         <div className="card">
         <img className="imagen" src={image} alt=''/>
         <ul>
-        <option className="types1">{types}</option>
+        <option className="types1">{types} </option>
         </ul>
         <ul >
         <option className="name1">{name}</option>
-        </ul>  
+        </ul> 
         </div>
 
     )

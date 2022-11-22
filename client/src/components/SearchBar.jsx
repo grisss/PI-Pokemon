@@ -23,10 +23,11 @@ const handleSubmit = (e) => {
 return (
     <div>
     <input
-    className="input"
+    className="input-M"
         type="text"
         onChange= {(e) => handleInputChange(e)}
-        placeholder="Buscar pokemons..."
+        autoFocus
+        placeholder="Buscar..."
     />
     <button  className="Search-button"  type="submit" onClick= {(e) => handleSubmit(e)}> Buscar </button>
     </div>

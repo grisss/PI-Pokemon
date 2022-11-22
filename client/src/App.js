@@ -4,6 +4,7 @@ import { BrowserRouter, Route , Switch } from "react-router-dom";
 import LandingPage from './components/LandingPage'
 import Create from './components/Create'
 import Details from './components/Details'
+import  Delete  from './components/Delete';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route exact path='/home' component={Home}/>
           <Route exact path='/home/:id' component={Details}/>
           <Route path='/create' component={Create}/>
+          <Route path='/eliminar' component={Delete}/>
         </Switch>      
       </div>
       </BrowserRouter>

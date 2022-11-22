@@ -29,7 +29,7 @@ const getApiInfo = async () => {
   
 const getDbInfo = async () => {
     try{
-      const result = await Pokemon.findAll({ //TRAERME TODO LO DE LA TABLA POKEMON, INCLUIDA LA RELACION CON TYPE
+      const result = await Pokemon.findAll({ 
         include:{
         model: Type,
         attributes: ['name'],
@@ -63,9 +63,9 @@ return result
 
 //Esta funcion concatena los datos de los pokemons de la api con los de la db
   const getAllPokemons = async () => { 
-    const apiInfo = await getApiInfo(); //GUARDO LOS DATOS DE LA CONSULTA A LA API
-    const dbInfo = await getDbInfo();   //GUARDO LOS DATOS DE LA CONSULTA A LA DB
-    const infoTotal = apiInfo.concat(dbInfo); //CONCATENO LAS DOS Y RETORNO ESTO.
+    const apiInfo = await getApiInfo(); 
+    const dbInfo = await getDbInfo();   
+    const infoTotal = apiInfo.concat(dbInfo); 
     return infoTotal;
   };
 module.exports = getAllPokemons;

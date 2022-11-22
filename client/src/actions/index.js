@@ -10,16 +10,18 @@ export function postPokemon(payload){
 export function searchPoke(name){
     return async function (dispatch){
         try{
-            var url= await axios.get('http://localhost:3001/pokemons?name='+name)
+            var url= await axios.get(`http://localhost:3001/pokemons?name=${name}`)
             return dispatch({
                 type: "SEARCH_NAME",
                 payload: url.data,
             });  
         }catch{
-            return alert("No se encontraron coinsidencias")
+            return alert("No existe el Pokemon")
         }
     }
 }
+
+
 export function filterPokemonsByType(payload){
     return{
         type: "FILTER_BY_TYPE",
@@ -44,7 +46,8 @@ export function filterCreated(payload) {
 
 export function filterByAttack(payload){
     return{
-        type:'FILTER_BY_ATTACK'
+        type:'FILTER_BY_ATTACK',
+        payload
     }
 }
 
@@ -64,18 +67,34 @@ export function getDetail(id) {
         type: "GET_DETAILS",
         payload: json.data
     })
-
 } catch(error) {
 console.log(error)
 }
 }}
 
+export function delete_pokemon(id){
+    return async function(dispatch){
+        var data3 = await axios.get('http://localhost:3001/pokemons/'+id) 
+        return({
+        type: "DELETE_POKEMON",
+        payload: data3.data
+    })}
+}
+
+
+
 export function getType() {
     return async function (dispatch) {
-    var api = await axios.get('http:/localhost:3001/pokemons/types');
+    try{
+    var info = await axios.get('http://localhost:3001/types');
     return dispatch({
         type: "GET_TYPE",
-        payload: api.data
+        payload: info.data
     })
-    }
+    }catch{
+        console.log(getType)
+
+    }}
 }
+
+

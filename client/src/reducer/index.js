@@ -16,17 +16,17 @@ function rootReducer(state = initialState, action) {
     case "FILTER_BY_TYPE":
         const allPokemons = state.allPokemons;
         const typeFiltered =
-        action.payload === "type"
-            ? allPokemons
-            : allPokemons.filter((e) => e.types.includes(action.payload));
+        action.payload === "type" ? allPokemons
+        : allPokemons.filter((e) => e.types.includes(action.payload));
         return {
         ...state,
         pokemons: typeFiltered,
         };
-    case "FILTER_CREATED":
-        const createdFilter = action.payload === "Creados"
-            ? state.allPokemons.filter((e) => e.id.length > 2)
-            : state.allPokemons.filter((e) => e.id <= 40);
+        
+        case "FILTER_CREATED":
+        let allPokemons2= state.allPokemons
+        const createdFilter = action.payload === "Creados"?
+        allPokemons2.filter((e) => e.createdInDb):allPokemons2.filter(el=> !el.createdInDb)
         return {
         ...state,
         pokemons:
@@ -48,11 +48,13 @@ function rootReducer(state = initialState, action) {
             pokemons:
             action.payload === "Fuerza" ? state.allPokemons : attackFilter
         };
-    case "POST_POKEMON":
+        
+        case "POST_POKEMON":
         return {
         ...state,
         };
-    case "SORT":
+        
+        case "SORT":
         let orderedCharacters = [...state.pokemons];
         orderedCharacters = orderedCharacters.sort((a, b) => {
         if (a.name < b.name) {
@@ -67,27 +69,35 @@ function rootReducer(state = initialState, action) {
         return {
         ...state,
         pokemons:
-            action.payload === "Filtro" ? state.allPokemons : orderedCharacters
+        action.payload === "Filtro" ? state.allPokemons : orderedCharacters
         };
-    case "SEARCH_NAME":
+        
+        case "SEARCH_NAME":
         return {
         ...state,
         pokemons: action.payload 
         };
-    case "GET_DETAILS":
+        
+        case "GET_DETAILS":
         return {
         ...state,
         detail: action.payload,
         };
 
-    case "GET_TYPE":
+        case "GET_TYPE":
         return {
         ...state,
         types: action.payload,
         };
-    default:
-        return state;
-    }
-}
+        default:
+            return state;
 
-export default rootReducer;
+        case "DELETE_POKEMON":
+            return{
+                ...state,
+                pokemons: state.pokemons.filter(p=>p.id !== action.payload),
+                allPokemons: state.pokemons.filter(p=>p.id !== action.payload)
+            }
+        }
+    }
+    export default rootReducer;

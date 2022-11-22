@@ -6,7 +6,7 @@ import {
   filterPokemonsByType,
   filterCreated,
   Sort,
-  filterByAttack,
+  filterByAttack
 } from "../actions/index.js";
 import { Link } from "react-router-dom";
 import Card from "./Card";
@@ -18,15 +18,12 @@ import IMG from '../imagenes/pokemon.jpg'
 
 function Home() {
   const dispatch = useDispatch();
-  const allPokemons = useSelector((state) => state.pokemons) //
+  const allPokemons = useSelector((state) => state.pokemons) 
   const [currentPage, setCurrentPage] = useState(1);
   const [pokemonsPerPage] = useState(12);
   const indexOfLastPokemon = currentPage * pokemonsPerPage;
   const indexOfFirstPokemon = indexOfLastPokemon - pokemonsPerPage;
-  const currentPokemons = allPokemons.slice(
-    indexOfFirstPokemon,
-    indexOfLastPokemon
-  );
+  const currentPokemons = allPokemons.slice(indexOfFirstPokemon,indexOfLastPokemon);
 
   const paginado = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -51,6 +48,8 @@ function Home() {
   function onSelectsChange(e) {
     dispatch(Sort(e.target.value));
   }
+
+ 
 
   return (
     <>
@@ -94,16 +93,19 @@ function Home() {
           {currentPokemons?.map((e) => {
               return (
                 <div>
-                  <Link className="Sub" to={"/home/" + e.id}>
+                  <Link className="Sub"  to={"/home/" + e.id}>
                     <Card 
-                      name={e.name} image={e.image} types={e.types}
+                      name={e.name} image={e.image} types={e.types}  key={e.id}  
                     />
+      
                   </Link>
                 </div>
               );
             })} 
             </div>
+
         </div>
+              
         <Paginado
             pokemonsPerPage={pokemonsPerPage}
             allPokemons={allPokemons.length}

@@ -5,8 +5,8 @@ const { Pokemon, Type } = require("../db");
 
 router.get("/", async (req, res) => {
     let name = req.query.name;
-    let pokemonsTotal = await getAllPokemons(); //Guardo mi controlador que trae todos los pokemons en una variable..
-    if (name) { //Consulto si me pasan un nombre y lo busco en la variable de arriba
+    let pokemonsTotal = await getAllPokemons(); 
+    if (name) { 
       let pokemonName = await pokemonsTotal.find(el =>el.name.toLowerCase()===name.toLocaleLowerCase()); 
     if(pokemonName=== undefined){
       return res.status(400).send("pokemon no encontrado")
@@ -22,7 +22,7 @@ router.get("/:id", async (req, res) => {
   try {
     const id = req.params.id;
     const allPokemons = await getAllPokemons();
-    if (id) { //Si me pasan un ID, filtro el que coincida con ese mismo, sino devuelvo texto.
+    if (id) { 
       let pokemonId = allPokemons.filter((el) => el.id == id); 
       pokemonId.length? 
       res.status(200).json(pokemonId): 
@@ -33,40 +33,6 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-/* router.post("/create", async (req, res, ) => { //Ruta de creacion del pokemon
-  try {
-    let { name, image, life, attack, defense, speed, height, weight, types} = req.body //Datos que necesito pedir
-
-    const newPokemon = await Pokemon.create({
-      name,
-      image,
-      life,
-      attack,
-      defense,
-      speed,
-      height,
-      weight,
-    });
-
-    if (!name) return res.json({ info: "El nombre es obligatorio" });
-
-    if(Array.isArray(types) && types.length){ //Consulto si lo que me llega en TYPES, es un arreglo y si tiene algo adentro.
-      let dbTypes = await Promise.all( //Armo una variable que dentro tendra una resolucion de promesas
-        types.map((e) => { // Agarro la data de types y le hago un map para verificar que cada elemento exista en 
-          return Type.findOne({where:{ name: e}}) // nuestra tabla de tipos
-        })
-      )
-     await newPokemon.setTypes(dbTypes) //Una vez que se resuelva la promesa del Pokemon.create, le agrego los tipos
-
-    return res.send("Pokemon creado exitosamente");
-    }
-  } catch (err) {
-    res.status(400).send("Error en data");
-  }
-}) */
-
-
-//------------------------------------------------------------------
 router.post('/', async (req, res) => {
   const {name, image, life, attack, defense, speed, height, weight, types, createdInDb} = req.body;
   try {
@@ -86,9 +52,9 @@ router.post('/', async (req, res) => {
               where: {name: types}
           });
           createdPokemon.addType(createdDb);
-          return res.status(200).send('Pokemon successfully created')
+          return res.status(200).send('¡Pokemon creado exitosamente!')
       } else {
-          return res.status(404).send('Pokemon was not created');
+          return res.status(404).send('No se creo el pokemon');
       }
   } catch (error) {
       console.log(error);    
